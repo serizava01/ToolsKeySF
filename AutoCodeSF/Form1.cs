@@ -46,7 +46,7 @@ namespace AutoCodeSF
                         chromeOptions.AddArgument("--no-proxy-server");
                         var driverService = ChromeDriverService.CreateDefaultService();
                         driverService.HideCommandPromptWindow = true;
-                        if (!isHeadless) chromeOptions.AddArgument("--headless=old");
+                        if (!isHeadless) chromeOptions.AddArgument("--headless");
                         chromeOptions.AddUserProfilePreference("profile.default_content_setting_values.images", 2);
                         driver = new ChromeDriver(driverService, chromeOptions);
                         break;
